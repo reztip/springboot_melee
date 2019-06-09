@@ -1,0 +1,1 @@
+INSERT INTO Player VALUES ('Leffen', 'William', 'Hjelte', null);
