@@ -6,6 +6,8 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 
+import org.apache.commons.lang.builder.ToStringBuilder;
+
 @Entity(name = "PLAYER")
 public class Player {
 
@@ -21,4 +23,58 @@ public class Player {
 	
 	@Column(name = "DATE_OF_BIRTH", nullable = true)
 	private Date dateOfBirth;
+	
+	
+	
+	public String toString() {
+		return ToStringBuilder.reflectionToString(this);
+	}
+
+
+
+	public String getGamerTag() {
+		return gamerTag;
+	}
+
+
+
+	public void setGamerTag(String gamerTag) {
+		this.gamerTag = gamerTag;
+	}
+
+
+
+	public String getFirstName() {
+		return firstName;
+	}
+
+
+
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+
+
+
+	public String getLastName() {
+		return lastName;
+	}
+
+
+
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+
+
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 }
